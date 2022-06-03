@@ -3,21 +3,21 @@
 
 ## About
 
-# Documentation
-# Requirements
+### Documentation
+### Requirements
 
 - Java (version)
 - cURL (any HTTP client)
 
 ## Setup
-# Mongo
-# Install
-# Set connection in project
+### Mongo
+### Install
+### Set connection in project
 
-## Model
+# Model
 
-## Project structure
+# Project structure
 
-## Example App
+# Example App
 
-## History
+# History
