@@ -37,7 +37,7 @@ public class SessionController {
 	 @PostMapping(value = {"/logout"})
 	    public ResponseEntity logout() {
 		 SecurityContextHolder.getContext().setAuthentication(null);
-		 return ResponseEntity.ok("logged out");
+		 return ResponseEntity.ok("");
 	    }
 	 
 }

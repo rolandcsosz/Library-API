@@ -33,10 +33,6 @@ public class LibraryController {
 
 	@Autowired
 	private LibraryRepository libraries;
-	@Autowired
-	private MemberRepository members;
-	@Autowired
-	private BookRepository books;
 	
 	 @GetMapping(value = {""})
 	    public ResponseEntity findAll() {
@@ -47,16 +43,7 @@ public class LibraryController {
 	    public ResponseEntity findById(@PathVariable String id) {
 		  return ResponseEntity.ok(libraries.findById(id).get());
 	    }
-	 
-	 @GetMapping(value = {"/{id}/books"})
-	    public List<Book> findBooksById(@PathVariable String id) {
-		  return books.findAllBooks(id);
-	    }
-	 
-	 @GetMapping(value = {"/{id}/members"})
-	    public List<Student> findMembersById(@PathVariable String id) {
-		  return members.findAllMembers(id);
-	    }
+
 	 
 	 @PostMapping(value = {""})
 	    public Library addlibrary(@RequestBody Library library) {

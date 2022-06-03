@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.csrlnd.LibraryAPI.Model.Book;
@@ -31,18 +32,17 @@ public class MemberController {
 	private MemberRepository members;
 	
 	 @GetMapping(value = {""})
-	    public ResponseEntity findAll() {
-		 return ResponseEntity.ok(members.findAll());
+	    public ResponseEntity findBooks(@RequestParam String libraryId) {
+		 if(libraryId.equals("all")) {
+			 return ResponseEntity.ok(members.findAll());
+		 }
+		 return ResponseEntity.ok(members.findAllMembers(libraryId));
+		 
 	    }
 	 
 	 @GetMapping(value = {"/{id}"})
 	    public ResponseEntity findById(@PathVariable String id) {
 		  return ResponseEntity.ok(members.findById(id).get());
-	    }
-	 
-	 @GetMapping(value = {"/{id}/books"})
-	    public ResponseEntity findBooksById(@PathVariable String id) {
-		  return ResponseEntity.ok(members.findById(id).get().getBooks());
 	    }
 	 
 	 @PostMapping(value = {""})
