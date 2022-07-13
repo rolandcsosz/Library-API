@@ -30,7 +30,10 @@ build/
 !**/src/test/**/build/
 
 ### Database connection details ###
-*.properties
+target/
+.settings/
+.classpath
+.project
 
 ### VS Code ###
 .vscode/
