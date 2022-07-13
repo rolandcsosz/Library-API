@@ -43,7 +43,6 @@ public class LibraryController {
 	    public ResponseEntity findById(@PathVariable String id) {
 		  return ResponseEntity.ok(libraries.findById(id).get());
 	    }
-
 	 
 	 @PostMapping(value = {""})
 	    public Library addlibrary(@RequestBody Library library) {

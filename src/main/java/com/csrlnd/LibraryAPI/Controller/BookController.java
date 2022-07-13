@@ -33,16 +33,15 @@ public class BookController {
 	@Autowired
 	private BookRepository books;
 	
-	@Secured("ADMIN")
 	 @GetMapping(value = {""})
 	    public ResponseEntity findBooks(@RequestParam String libraryId) {
-		if(libraryId.equals("all")) {
-			return ResponseEntity.ok(books.findAll());
-		}
+		 if(libraryId.equals("all")) {
+			 return ResponseEntity.ok(books.findAll());
+		 }
 		 return ResponseEntity.ok(books.findAllBooks(libraryId));
+		 
 	    }
 	 
-	@Secured("ADMIN")
 	 @GetMapping(value = {"/{id}"})
 	    public ResponseEntity findById(@PathVariable String id) {
 		  return ResponseEntity.ok(books.findById(id).get());
