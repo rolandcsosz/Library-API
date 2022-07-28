@@ -87,7 +87,7 @@ java -jar target/Library-API-1.0.0-SNAPSHOT.jar com.rolandcsosz.LibraryAPI.Main
 
 ##  Copyright & License
 
-- Copyright (©) 2022 by [Csősz Roalnd](https://github.com/rolandcsosz)
+- Copyright (©) 2022 by [Csősz Roland](https://github.com/rolandcsosz)
 
 - Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 2, June 1991](./LICENSE)
 
